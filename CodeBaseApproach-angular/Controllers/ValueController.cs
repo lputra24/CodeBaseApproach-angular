@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CodeBaseApproach_angular.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,7 @@ namespace CodeBaseApproach_angular.Controllers
             _context = context;
         }
         ////// GET: /<controller>/
+        [Authorize]
         [HttpGet]
         [Route("/[controller]")]
         public async Task<IActionResult> getValues()

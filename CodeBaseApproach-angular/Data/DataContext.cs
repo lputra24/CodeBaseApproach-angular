@@ -12,5 +12,6 @@ namespace CodeBaseApproach_angular.Data
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         public DbSet<ValueAngular> ValuesAngular { get; set; }
+        public DbSet<User> User { get; set; }
     }
 }
